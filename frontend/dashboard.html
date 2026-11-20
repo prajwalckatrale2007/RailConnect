@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect | Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="dashboard.html" class="logo">🚄 RailConnect</a>
+
+    <div class="nav-buttons">
+        <a href="login.html" id="loginButton" class="nav-btn">Login</a>
+
+        <a href="register.html" id="registerButton"
+           class="nav-btn register-btn">Register</a>
+
+        <button id="logoutButton" class="nav-btn logout-btn"
+                onclick="logout()" hidden>Logout</button>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p id="welcomeUser" class="welcome-user"></p>
+
+            <p class="tagline">WELCOME TO RAILCONNECT</p>
+
+            <h1>
+                Your Journey,<br>
+                <span>Your Responsibility.</span>
+            </h1>
+
+            <p class="description">
+                Experience a smarter and easier way to travel.
+                Book tickets, check trains and manage your journeys
+                in one place.
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://akm-img-a-in.tosshub.com/businesstoday/images/photo_gallery/202607/_2026_06_vande-bharat-express-is-one-of-the-most-recognisable-symbols-of-modern-indian-railways-225334307-16x9.jpg?size=686:*"
+                alt="Orange and black Vande Bharat Sleeper Express">
+        </div>
+
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="services">
+
+        <div class="section-heading">
+            <p>OUR SERVICES</p>
+
+            <div class="heading-line">
+                <span></span>
+                <h2>Everything You Need</h2>
+                <span></span>
+            </div>
+
+            <p class="section-subtitle">
+                Explore railway services in one place
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <!-- SEARCH TRAIN -->
+            <a href="search-train.html" class="service-card">
+                <div class="service-icon">🔎</div>
+                <h3>Search Train</h3>
+                <p>Search trains by source, destination and journey date.</p>
+                <span class="card-link">Explore Service →</span>
+            </a>
+
+            <!-- MY BOOKINGS -->
+            <a href="my-bookings.html" class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>My Bookings</h3>
+                <p>View your booked tickets and journey details.</p>
+                <span class="card-link">Explore Service →</span>
+            </a>
+
+            <!-- PNR ENQUIRY -->
+            <a href="pnr-enquiry.html" class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>PNR Enquiry</h3>
+                <p>Check your ticket booking status using PNR.</p>
+                <span class="card-link">Check PNR Status →</span>
+            </a>
+
+            <!-- CANCEL TICKET -->
+            <a href="cancel-ticket.html" class="service-card">
+                <div class="service-icon">❌</div>
+                <h3>Cancel Ticket</h3>
+                <p>Manage and cancel your railway reservations.</p>
+                <span class="card-link">Explore Service →</span>
+            </a>
+
+            <!-- TRAIN SCHEDULE - EXTERNAL WEBSITE -->
+            <a href="https://www.indianrail.gov.in/"
+               class="service-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="service-icon">🕒</div>
+                <h3>Train Schedule</h3>
+                <p>Find train timings and route information on Indian Railways.</p>
+                <span class="card-link">Open Railway Website ↗</span>
+            </a>
+
+            <!-- TRACK YOUR TRAIN - OFFICIAL NTES WEBSITE -->
+            <a href="https://enquiry.indianrail.gov.in/ntes/"
+               class="service-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="service-icon">📍</div>
+                <h3>Track Your Train</h3>
+                <p>Check live train running status and location using NTES.</p>
+                <span class="card-link">Track Train ↗</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 RailConnect. All Rights Reserved.</p>
+</footer>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

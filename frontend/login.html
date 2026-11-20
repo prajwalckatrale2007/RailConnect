@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | RailConnect</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<header class="auth-header">
+    <a class="brand" href="index.html">
+        🚄 Rail<span>Connect</span>
+    </a>
+    <span class="header-caption">
+        INDIAN RAILWAY RESERVATION SYSTEM
+    </span>
+</header>
+
+<main class="auth-main">
+
+    <!-- LEFT SIDE -->
+    <section class="hero-copy">
+
+        <span class="hero-tag">✦ WELCOME BACK</span>
+
+        <h1>
+            Your Journey<br>
+            Starts Here.<br>
+            <span>Login to RailConnect.</span>
+        </h1>
+
+        <p>
+            Welcome back to RailConnect!
+            Login to book railway tickets, manage your reservations,
+            check PNR status and enjoy a smarter railway journey.
+        </p>
+
+    </section>
+
+    <!-- RIGHT SIDE LOGIN CARD -->
+    <section class="auth-card">
+
+        <h2>Welcome Back!</h2>
+
+        <p class="auth-subtitle">
+            Login to continue your journey
+        </p>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label for="usernameOrEmail">
+                    Registered Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="usernameOrEmail"
+                    placeholder="Enter your registered email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <a href="forgot-password.html" class="forgot-link">
+                Forgot Password?
+            </a>
+
+            <button class="auth-button" type="submit">
+                Login to RailConnect
+            </button>
+
+            <p id="message" class="message"></p>
+
+        </form>
+
+        <p class="auth-bottom">
+            Don't have an account?
+            <a href="register.html">Create Account</a>
+        </p>
+
+        <p class="auth-bottom">
+            <a href="index.html">← Back to Home</a>
+        </p>
+
+    </section>
+
+</main>
+
+<script src="login.js"></script>
+
+</body>
+</html>

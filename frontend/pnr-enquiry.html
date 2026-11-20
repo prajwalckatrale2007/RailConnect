@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect - PNR Enquiry</title>
+    <link rel="stylesheet" href="pnr-enquiry.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🚆 RailConnect</div>
+        <a href="dashboard.html" class="back-button">← Dashboard</a>
+    </nav>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>PNR Enquiry</h1>
+            <p>Check your railway ticket booking status instantly.</p>
+        </section>
+
+        <section class="search-card">
+            <h2>Check PNR Status</h2>
+            <p>Enter your 10-character PNR number below.</p>
+
+            <form id="pnrForm">
+                <div class="input-group">
+                    <label for="pnrInput">PNR Number</label>
+                    <input
+                        type="text"
+                        id="pnrInput"
+                        placeholder="Enter 10-digit PNR"
+                        minlength="10"
+                        maxlength="10"
+                        required
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button type="submit" id="searchButton">
+                    Check PNR Status
+                </button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </section>
+
+        <section id="resultSection" class="result-section" hidden>
+
+            <div class="result-header">
+                <div>
+                    <h2>Ticket Details</h2>
+                    <p>RailConnect Reservation Ticket</p>
+                </div>
+                <span id="statusBadge" class="status-badge">CONFIRMED</span>
+            </div>
+
+            <div class="pnr-number">
+                <span>PNR NUMBER</span>
+                <strong id="resultPnr">-</strong>
+            </div>
+
+            <div class="route-box">
+                <div>
+                    <span>FROM</span>
+                    <h2 id="source">-</h2>
+                </div>
+
+                <div class="route-icon">➜</div>
+
+                <div>
+                    <span>TO</span>
+                    <h2 id="destination">-</h2>
+                </div>
+            </div>
+
+            <div class="train-info">
+                <h3 id="trainName">-</h3>
+                <p>Train Number: <strong id="trainNumber">-</strong></p>
+            </div>
+
+            <h3 class="section-heading">Passenger Information</h3>
+
+            <div class="details-grid">
+                <div class="detail">
+                    <span>Passenger Name</span>
+                    <strong id="passengerName">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Age / Gender</span>
+                    <strong id="ageGender">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Mobile Number</span>
+                    <strong id="mobileNumber">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Email</span>
+                    <strong id="email">-</strong>
+                </div>
+            </div>
+
+            <h3 class="section-heading">Journey Information</h3>
+
+            <div class="details-grid">
+                <div class="detail">
+                    <span>Journey Date</span>
+                    <strong id="journeyDate">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Departure Time</span>
+                    <strong id="departureTime">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Travel Class</span>
+                    <strong id="className">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Seat Number</span>
+                    <strong id="seatNumber">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Ticket Fare</span>
+                    <strong id="fare">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Booking Time</span>
+                    <strong id="bookingTime">-</strong>
+                </div>
+            </div>
+
+            <div id="cancelledNotice" class="cancelled-notice" hidden>
+                This ticket has been cancelled. The seat is no longer reserved.
+            </div>
+
+            <div class="result-footer">
+                <a href="dashboard.html" class="back-result-button">
+                    ← Back to Dashboard
+                </a>
+
+                <button type="button" id="newSearchButton">
+                    Check Another PNR
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 RailConnect | Railway Reservation System</p>
+    </footer>
+
+    <script src="pnr-enquiry.js"></script>
+</body>
+</html>

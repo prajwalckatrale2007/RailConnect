@@ -1,0 +1,21 @@
+
+# Ignore backend build files
+backend/target/
+**/target/
+*.class
+
+# Ignore database credentials
+backend/src/main/resources/application.properties
+
+# Ignore ZIP backup
+/backend.zip
+
+# Ignore secret files
+.env
+.env.*
+!.env.example
+
+# Ignore editor files
+.vscode/
+.DS_Store
+Thumbs.db

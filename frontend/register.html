@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | RailConnect</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<header class="auth-header">
+    <a class="brand" href="index.html">🚄 Rail<span>Connect</span></a>
+    <span class="header-caption">INDIAN RAILWAY RESERVATION SYSTEM</span>
+</header>
+
+<main class="auth-main">
+    <section class="hero-copy">
+        <span class="hero-tag">✦ JOIN RAILCONNECT</span>
+        <h1>
+            Start Your<br>
+            Journey.<br>
+            <span>Create Your Account.</span>
+        </h1>
+        <p>
+            Register with RailConnect to book tickets,
+            manage reservations and make your railway
+            journey simple and comfortable.
+        </p>
+    </section>
+
+    <section class="auth-card">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Register to begin your journey</p>
+
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Full Name / Username</label>
+                <input type="text" id="username"
+                       placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input type="password" id="password"
+                       placeholder="Create a password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                       placeholder="Confirm your password" required>
+            </div>
+
+            <button class="auth-button" type="submit">
+                Create My Account
+            </button>
+
+            <p id="message" class="message"></p>
+        </form>
+
+        <p class="auth-bottom">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+    </section>
+</main>
+
+<script src="login.js"></script>
+</body>
+</html>

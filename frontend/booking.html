@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect - Book Ticket</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #17243b;
+        }
+        header {
+            background: #101e36;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h2 { color: #ff9638; }
+        header a { color: white; text-decoration: none; }
+        .container { max-width: 750px; margin: 35px auto; padding: 0 18px; }
+        .booking-card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px #17243b12;
+        }
+        h1 { margin-bottom: 20px; }
+        .trip-info {
+            background: #101e36;
+            color: white;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        .trip-info strong { color: #ffad55; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+        }
+        .field label { display: block; font-weight: bold; margin-bottom: 8px; }
+        input, select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d5dce7;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+        }
+        .full { grid-column: 1 / -1; }
+        button {
+            width: 100%;
+            background: #f58220;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 22px;
+        }
+        button:hover { background: #dc6c10; }
+        button:disabled { background: #9ba5b4; cursor: not-allowed; }
+        #message { margin-top: 18px; line-height: 1.7; }
+        .success {
+            background: #e8f8ee;
+            color: #176b38;
+            border-radius: 10px;
+            padding: 18px;
+        }
+        .error { color: #c22; }
+        @media(max-width: 550px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .full { grid-column: auto; }
+            .booking-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2>🚆 RailConnect</h2>
+    <a href="search-train.html">← Back to Search</a>
+</header>
+
+<main class="container">
+    <section class="booking-card">
+        <h1>Passenger Details</h1>
+
+        <div class="trip-info" id="tripInfo">
+            Loading journey details...
+        </div>
+
+        <form id="bookingForm">
+            <div class="form-grid">
+                <div class="field full">
+                    <label for="passengerName">Passenger Full Name</label>
+                    <input id="passengerName" type="text" required maxlength="100"
+                           placeholder="Enter passenger name">
+                </div>
+
+                <div class="field">
+                    <label for="age">Age</label>
+                    <input id="age" type="number" min="1" max="120" required>
+                </div>
+
+                <div class="field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input id="mobileNumber" type="tel" required
+                           pattern="[0-9]{10}" maxlength="10"
+                           placeholder="10-digit mobile number">
+                </div>
+
+                <div class="field">
+                    <label for="email">Passenger Email</label>
+                    <input id="email" type="email" required
+                           placeholder="example@gmail.com">
+                </div>
+            </div>
+
+            <button id="bookButton" type="submit">Confirm & Book Ticket</button>
+        </form>
+
+        <div id="message"></div>
+    </section>
+</main>
+
+<script src="booking.js"></script>
+</body>
+</html>

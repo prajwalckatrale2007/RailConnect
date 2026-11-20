@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect - Search Trains</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #17243b;
+        }
+        header {
+            background: #101e36;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        header h2 { color: #ff9638; }
+        header a { color: white; text-decoration: none; }
+        .container { max-width: 1100px; margin: 35px auto; padding: 0 18px; }
+        .hero { margin-bottom: 24px; }
+        .hero h1 { font-size: 30px; margin-bottom: 8px; }
+        .hero p { color: #65738a; }
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px #17243b12;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        label { display: block; font-weight: bold; margin-bottom: 8px; }
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d5dce7;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        button {
+            background: #f58220;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 13px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover { background: #dc6c10; }
+        .search-button { align-self: end; }
+        #message { margin: 22px 0; font-weight: bold; }
+        .train-card {
+            background: white;
+            border-radius: 13px;
+            padding: 22px;
+            margin: 18px 0;
+            box-shadow: 0 4px 16px #17243b10;
+        }
+        .train-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .train-name { font-size: 21px; color: #142542; }
+        .train-number { color: #77849a; margin-top: 7px; }
+        .route { margin: 18px 0; color: #44536b; }
+        .classes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .class-box {
+            border: 1px solid #dce3ed;
+            border-radius: 9px;
+            padding: 14px;
+        }
+        .class-box strong { display: block; margin-bottom: 7px; }
+        .available { color: #16834a; font-weight: bold; }
+        .unavailable { color: #c33; font-weight: bold; }
+        .fare { color: #68768b; margin: 7px 0; }
+        .class-box button { width: 100%; padding: 10px 5px; margin-top: 8px; }
+        .class-box button:disabled { background: #aab2bf; cursor: not-allowed; }
+        @media(max-width: 700px) {
+            .search-box { grid-template-columns: 1fr; }
+            .classes { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 25px; }
+        }
+        @media(max-width: 380px) {
+            .classes { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2>🚆 RailConnect</h2>
+    <a href="dashboard.html">← Back to Dashboard</a>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h1>Search Your Train</h1>
+        <p>Find trains and check date-wise seat availability.</p>
+    </section>
+
+    <form class="search-box" id="searchForm">
+        <div>
+            <label for="source">From Station</label>
+            <input id="source" type="text" placeholder="Enter source station">
+        </div>
+        <div>
+            <label for="destination">To Station</label>
+            <input id="destination" type="text" placeholder="Enter destination station">
+        </div>
+        <div>
+            <label for="journeyDate">Journey Date</label>
+            <input id="journeyDate" type="date" required>
+        </div>
+        <button class="search-button" type="submit">Search Trains</button>
+    </form>
+
+    <p id="message"></p>
+    <section id="trainResults"></section>
+</main>
+
+<script src="search-train.js"></script>
+</body>
+</html>

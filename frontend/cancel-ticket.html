@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect | Cancel Ticket</title>
+    <link rel="stylesheet" href="cancel-ticket.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">🚄 RailConnect</a>
+        <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-icon">🎫</div>
+            <h1>Cancel Your Ticket</h1>
+            <p>Enter your PNR number to find your reservation and cancel your ticket.</p>
+        </section>
+
+        <!-- PNR SEARCH -->
+        <section class="search-card">
+            <h2>Find Your Booking</h2>
+
+            <form id="cancelForm">
+                <label for="pnrInput">Enter 10-character PNR Number</label>
+
+                <input
+                    type="text"
+                    id="pnrInput"
+                    placeholder="Enter your PNR number"
+                    minlength="10"
+                    maxlength="10"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search Ticket
+                </button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </section>
+
+        <!-- TICKET DETAILS -->
+        <section id="ticketSection" class="ticket-card" hidden>
+
+            <div class="ticket-header">
+                <div>
+                    <h2>Reservation Details</h2>
+                    <p>RailConnect Ticket Information</p>
+                </div>
+
+                <span id="statusBadge" class="status-badge">CONFIRMED</span>
+            </div>
+
+            <div class="pnr-box">
+                <span>PNR NUMBER</span>
+                <strong id="pnrNumber">-</strong>
+            </div>
+
+            <div class="route-box">
+                <div>
+                    <span>FROM</span>
+                    <h2 id="source">-</h2>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div>
+                    <span>TO</span>
+                    <h2 id="destination">-</h2>
+                </div>
+            </div>
+
+            <div class="train-box">
+                <h3 id="trainName">-</h3>
+                <p>Train Number: <strong id="trainNumber">-</strong></p>
+            </div>
+
+            <h3 class="section-heading">Passenger Details</h3>
+
+            <div class="details-grid">
+                <div class="detail">
+                    <span>Passenger Name</span>
+                    <strong id="passengerName">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Age / Gender</span>
+                    <strong id="ageGender">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Mobile Number</span>
+                    <strong id="mobileNumber">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Email</span>
+                    <strong id="email">-</strong>
+                </div>
+            </div>
+
+            <h3 class="section-heading">Journey Details</h3>
+
+            <div class="details-grid">
+                <div class="detail">
+                    <span>Journey Date</span>
+                    <strong id="journeyDate">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Departure Time</span>
+                    <strong id="departureTime">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Travel Class</span>
+                    <strong id="className">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Seat Number</span>
+                    <strong id="seatNumber">-</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Ticket Fare</span>
+                    <strong id="fare">-</strong>
+                </div>
+            </div>
+
+            <div id="cancelledNotice" class="cancelled-notice" hidden>
+                This ticket has already been cancelled.
+            </div>
+
+            <div id="confirmedNotice" class="warning-notice">
+                Please verify your ticket details before cancelling.
+                OTP verification is required.
+            </div>
+
+            <div class="action-buttons">
+                <a href="dashboard.html" class="dashboard-button">
+                    ← Back to Dashboard
+                </a>
+
+                <button type="button" id="cancelButton" class="cancel-button">
+                    Cancel My Ticket
+                </button>
+            </div>
+
+            <button type="button" id="newSearchButton" class="new-search-button">
+                Search Another PNR
+            </button>
+
+        </section>
+
+        <!-- DEMO OTP VERIFICATION -->
+        <section id="otpSection" class="otp-card" hidden>
+
+            <div class="otp-icon">🔐</div>
+
+            <h2>OTP Verification</h2>
+
+            <p class="otp-description">
+                A 4-digit Demo OTP has been generated for your ticket cancellation.
+            </p>
+
+            <div class="demo-otp-box">
+                <span>YOUR DEMO OTP</span>
+                <strong id="demoOtp">----</strong>
+                <small>Use this OTP to verify your cancellation.</small>
+            </div>
+
+            <form id="otpForm">
+
+                <label for="otpInput">Enter 4-digit OTP</label>
+
+                <input
+                    type="text"
+                    id="otpInput"
+                    placeholder="Enter OTP"
+                    maxlength="4"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    required
+                >
+
+                <button type="submit" id="verifyButton">
+                    Verify OTP & Cancel Ticket
+                </button>
+
+            </form>
+
+            <div id="otpMessage" class="message"></div>
+
+            <button type="button" id="resendOtpButton" class="resend-button">
+                Generate New OTP
+            </button>
+
+            <button type="button" id="backToTicketButton" class="back-ticket-button">
+                ← Back to Ticket Details
+            </button>
+
+            <a href="dashboard.html" class="otp-dashboard-button">
+                ← Back to Dashboard
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 RailConnect. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cancel-ticket.js"></script>
+
+</body>
+</html>

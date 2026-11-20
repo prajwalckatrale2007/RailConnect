@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | RailConnect</title>
+    <link rel="stylesheet" href="my-bookings.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="dashboard.html" class="brand">🚆 RailConnect</a>
+    <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
+</header>
+
+<main class="container">
+    <section class="page-heading">
+        <p class="eyebrow">YOUR JOURNEY, YOUR RECORD</p>
+        <h1>My Bookings</h1>
+        <p>View your tickets, check booking status and download your PDF tickets.</p>
+    </section>
+
+    <section class="summary-grid">
+        <div class="summary-card">
+            <span>Total Bookings</span>
+            <strong id="totalBookings">0</strong>
+        </div>
+        <div class="summary-card">
+            <span>Upcoming</span>
+            <strong id="upcomingBookings">0</strong>
+        </div>
+        <div class="summary-card">
+            <span>Completed</span>
+            <strong id="completedBookings">0</strong>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="tabs">
+            <button class="tab active" id="upcomingTab" type="button">
+                Upcoming <span id="upcomingCount">0</span>
+            </button>
+            <button class="tab" id="completedTab" type="button">
+                Completed <span id="completedCount">0</span>
+            </button>
+        </div>
+
+        <div id="loadingMessage" class="message">Loading your bookings...</div>
+        <div id="errorMessage" class="message error" hidden></div>
+        <div id="bookingsList" class="bookings-list"></div>
+    </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script src="my-bookings.js"></script>
+</body>
+</html>

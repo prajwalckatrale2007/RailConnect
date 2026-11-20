@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #071d40, #1765b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+}
+
+.brand {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.brand h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: #dbeafe;
+}
+
+.login-card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 15px 40px #0004;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #102c54;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 8px;
+    font-weight: bold;
+    color: #263b59;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1675e8;
+}
+
+.password-box {
+    display: flex;
+    gap: 5px;
+}
+
+.password-box button {
+    border: none;
+    background: #e8f1ff;
+    color: #1455a0;
+    padding: 0 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.forgot {
+    text-align: right;
+    margin: 15px 0;
+}
+
+a {
+    color: #1675e8;
+    text-decoration: none;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1459a5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    background: #0c3d78;
+}
+
+#loginMessage {
+    margin-top: 15px;
+    text-align: center;
+    color: #d32f2f;
+}
+
+.separator {
+    text-align: center;
+    margin: 22px;
+    color: #94a3b8;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer {
+    color: white;
+    margin-top: 25px;
+    font-size: 12px;
+}

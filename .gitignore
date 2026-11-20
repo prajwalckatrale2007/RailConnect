@@ -1,0 +1,11 @@
+backend/target/
+**/target/
+*.class
+backend/src/main/resources/application.properties
+/backend.zip
+.env
+.env.*
+!.env.example
+.vscode/
+.DS_Store
+Thumbs.db

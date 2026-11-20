@@ -1,0 +1,510 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #17243a;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #071a36;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    color: #ff8a00;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-button {
+    background: #ff7900;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    color: #071a36;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.search-card,
+.ticket-card,
+.otp-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.search-card h2 {
+    color: #071a36;
+    margin-bottom: 20px;
+}
+
+.search-card label,
+.otp-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-card input,
+.otp-card input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 17px;
+}
+
+.search-card input {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.search-card input:focus,
+.otp-card input:focus {
+    border-color: #ff7900;
+    box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.12);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#searchButton,
+#verifyButton {
+    width: 100%;
+    background: #ff7900;
+    color: white;
+    padding: 15px;
+}
+
+#searchButton:hover,
+#verifyButton:hover {
+    background: #e56d00;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.message.error {
+    color: #dc2626;
+}
+
+.message.success {
+    color: #15803d;
+}
+
+.ticket-card {
+    margin-top: 25px;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ticket-header h2 {
+    color: #071a36;
+    margin-bottom: 6px;
+}
+
+.ticket-header p {
+    color: #64748b;
+}
+
+.status-badge {
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-confirmed {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.status-cancelled {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.status-other {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.pnr-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: #f1f5f9;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 22px 0;
+}
+
+.pnr-box span,
+.route-box span,
+.detail span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pnr-box strong {
+    color: #ff7900;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.route-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: #071a36;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.route-box span {
+    color: #cbd5e1;
+}
+
+.route-box h2 {
+    margin-top: 9px;
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.arrow {
+    color: #ff8a00;
+    font-size: 30px;
+}
+
+.train-box {
+    background: #fff7ed;
+    border-left: 4px solid #ff7900;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.train-box h3 {
+    color: #071a36;
+    margin-bottom: 7px;
+}
+
+.train-box p {
+    color: #64748b;
+}
+
+.section-heading {
+    color: #071a36;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.detail {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 9px;
+    min-width: 0;
+}
+
+.detail span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.detail strong {
+    color: #071a36;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.warning-notice,
+.cancelled-notice {
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 8px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.warning-notice {
+    background: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+.cancelled-notice {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.dashboard-button {
+    display: inline-block;
+    background: #071a36;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cancel-button {
+    background: #dc2626;
+    color: white;
+    padding: 14px 20px;
+}
+
+.cancel-button:hover {
+    background: #b91c1c;
+}
+
+.new-search-button {
+    width: 100%;
+    background: #e2e8f0;
+    color: #071a36;
+    padding: 14px;
+    margin-top: 15px;
+}
+
+.new-search-button:hover {
+    background: #cbd5e1;
+}
+
+/* OTP SECTION */
+
+.otp-card {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 5px solid #ff7900;
+}
+
+.otp-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.otp-card h2 {
+    color: #071a36;
+    margin-bottom: 10px;
+}
+
+.otp-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.demo-otp-box {
+    background: #071a36;
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.demo-otp-box span {
+    display: block;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.demo-otp-box strong {
+    display: block;
+    font-size: 36px;
+    letter-spacing: 12px;
+    color: #ff8a00;
+    margin-bottom: 12px;
+}
+
+.demo-otp-box small {
+    color: #cbd5e1;
+}
+
+.otp-card form {
+    text-align: left;
+}
+
+.otp-card input {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 12px;
+    font-weight: bold;
+}
+
+.resend-button,
+.back-ticket-button,
+.otp-dashboard-button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resend-button {
+    color: #071a36;
+    background: #fff1e3;
+}
+
+.back-ticket-button {
+    color: white;
+    background: #475569;
+}
+
+.otp-dashboard-button {
+    color: white;
+    background: #071a36;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    margin-top: 35px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .back-button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .search-card,
+    .ticket-card,
+    .otp-card {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .route-box h2 {
+        font-size: 16px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .dashboard-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .demo-otp-box strong {
+        font-size: 30px;
+    }
+}

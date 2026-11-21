@@ -1,7 +1,8 @@
 
 const API = "https://railconnect-backend-63jy.onrender.com/api/auth";
-const DASHBOARD_URL = "http://127.0.0.1:5500/frontend/dashboard.html";
-const LOGIN_URL = "http://127.0.0.1:5500/frontend/login.html";
+
+const DASHBOARD_URL = new URL("dashboard.html", window.location.href).href;
+const LOGIN_URL = new URL("login.html", window.location.href).href;
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } catch (error) {
                 console.error(error);
-                showMessage("Cannot connect to backend. Start Spring Boot on port 8080.", true);
+                showMessage("Cannot connect to backend. Please try again.", true);
             }
         });
     }

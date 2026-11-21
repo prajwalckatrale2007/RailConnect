@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://railconnect-backend-63jy.onrender.com/api";
 
 const pnrForm = document.getElementById("pnrForm");
 const pnrInput = document.getElementById("pnrInput");

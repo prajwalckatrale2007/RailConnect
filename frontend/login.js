@@ -1,5 +1,5 @@
 
-const API = "http://localhost:8080/api/auth";
+const API = "https://railconnect-backend-63jy.onrender.com/api/auth";
 const DASHBOARD_URL = "http://127.0.0.1:5500/frontend/dashboard.html";
 const LOGIN_URL = "http://127.0.0.1:5500/frontend/login.html";
 

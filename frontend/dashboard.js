@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("loginButton");
     const registerButton = document.getElementById("registerButton");
     const logoutButton = document.getElementById("logoutButton");
+    const profileButton = document.getElementById("profileButton");
     const welcomeUser = document.getElementById("welcomeUser");
 
     function isLoggedIn() {
@@ -17,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
         loginButton.hidden = loggedIn;
         registerButton.hidden = loggedIn;
         logoutButton.hidden = !loggedIn;
+
+        if (profileButton) {
+            profileButton.hidden = !loggedIn;
+        }
 
         const username =
             localStorage.getItem("railconnectUser") || "User";

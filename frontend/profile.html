@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect | My Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="dashboard.html" class="logo">🚄 RailConnect</a>
+    <a href="dashboard.html" class="back-btn">← Dashboard</a>
+</header>
+
+<main class="profile-container">
+
+    <section class="profile-card">
+
+        <div class="profile-header">
+            <div class="avatar">👤</div>
+            <h1>My Profile</h1>
+            <p>Manage your personal account information</p>
+        </div>
+
+        <div class="section-title">Personal Information</div>
+
+        <div class="detail">
+            <label>Full Name</label>
+            <p id="profileName">Loading...</p>
+        </div>
+
+        <div class="detail">
+            <label>Email Address</label>
+            <p id="profileEmail">Loading...</p>
+        </div>
+
+        <div class="detail">
+            <label>Account ID</label>
+            <p id="profileId">RailConnect Member</p>
+        </div>
+
+        <div class="security-section">
+
+            <div class="section-title">Account Security</div>
+
+            <p class="security-description">
+                Change your password securely using a 4-digit OTP.
+            </p>
+
+            <button type="button" id="openPasswordButton"
+                    class="primary-btn">
+                🔐 Change Password
+            </button>
+
+            <div id="passwordSection" hidden>
+
+                <h3>Verify Your Account</h3>
+
+                <label for="email">Registered Email</label>
+                <input type="email" id="email" readonly>
+
+                <button type="button" id="sendOtpButton"
+                        class="primary-btn">
+                    Get Demo OTP
+                </button>
+
+                <div id="otpSection" hidden>
+
+                    <div class="demo-box">
+                        <strong>Your Demo OTP</strong>
+                        <span id="demoOtp"></span>
+                        <small>Valid for 5 minutes</small>
+                    </div>
+
+                    <label for="otp">Enter 4-Digit OTP</label>
+                    <input type="text" id="otp"
+                           maxlength="4"
+                           inputmode="numeric"
+                           placeholder="Enter OTP">
+
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword"
+                           placeholder="Enter new password">
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword"
+                           placeholder="Confirm new password">
+
+                    <button type="button" id="changePasswordButton"
+                            class="primary-btn">
+                        Confirm Password Change
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="message" class="message"></p>
+
+        </div>
+
+        <button type="button" id="logoutButton"
+                class="logout-btn">
+            Logout
+        </button>
+
+    </section>
+
+</main>
+
+<script src="profile.js"></script>
+
+</body>
+</html>
